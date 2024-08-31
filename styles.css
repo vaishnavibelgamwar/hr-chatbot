@@ -1,0 +1,166 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 800px;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left {
+    background-color: #007bff;
+    color: white;
+    padding: 60px;
+    flex: 1;
+    position: relative;
+}
+
+.left::before, .left::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.left::before {
+    width: 150px;
+    height: 150px;
+    top: 20px;
+    left: 20px;
+}
+
+.left::after {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.headline {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subheadline {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.right {
+    padding: 40px;
+    flex: 1;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-form input[type="text"],
+.sign-in-form input[type="password"] {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.show-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.sign-in-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.sign-in-form label {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-in-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sign-in-form button:hover {
+    background-color: #0056b3;
+}
+
+.other-sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.other-sign-in:hover {
+    background-color: #f0f2f5;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.sign-up {
+    text-align: center;
+    font-size: 14px;
+}
+
+.sign-up a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign-up a:hover {
+    text-decoration: underline;
+}

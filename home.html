@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Mountain Energy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #666666;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #28a745;
+        }
+
+        .account {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .account a {
+            text-decoration: none;
+            color: #666666;
+            font-size: 14px;
+        }
+
+        .account .search {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .account .search input[type="text"] {
+            padding: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .account .search button {
+            background-color: #28a745;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .account .login {
+            background-color: #ff7f3f;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        .main-banner {
+            background-color: #e0f7fa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main-banner h1 {
+            color: #3b945e;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .main-banner p {
+            color: #666666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .main-banner .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .main-banner .buttons a {
+            text-decoration: none;
+            background-color: #ff7f3f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .main-banner .buttons a:hover {
+            background-color: #28a745;
+        }
+
+        .background-image {
+            background-image: url('https://imageurl.com'); /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .background-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 2;
+        }
+
+        .main-content {
+            z-index: 3;
+            position: relative;
+        }
+        #myLandbot {
+            width: 350px; /* Adjust width as needed */
+            height: 500px; /* Adjust height as needed */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            border: none;
+        }
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #87cefa; /* Sky blue color */
+            border-radius: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 60px;
+            z-index: 9999;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .chatbot-button img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .chatbot-button span {
+            display: block;
+            font-weight: bold;
+        }
+
+        .chatbot-popup {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            height: 500px;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .chatbot-popup iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+      
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Business Vertical</a>
+            <a href="#">Vendor Zone</a>
+            <a href="#">Sustainability</a>
+            <a href="#">Careers</a>
+            <a href="#">Vigilance</a>
+        </nav>
+        <div class="account">
+            <a href="#">Contact Us</a>
+            <a href="#">Blog</a>
+            <div class="search">
+                <input type="text" placeholder="Search here...">
+                <button>Search</button>
+            </div>
+            <a href="#" class="login">My Account</a>
+        </div>
+    </header>
+
+    <div class="main-banner">
+        <img src="https://www.gailonline.com/images/slides/Energizingpossibilities1500x500.jpg">
+        <h1>New India <span style="color: #28a745;">New Energy</span>.</h1>
+        
+    </div>
+    
+
+    <!-- JavaScript for redirecting to the two-factor authentication page -->
+    <script>
+        function redirectToTwoFactor() {
+            window.location.href = "2factor.html";
+        }
+    </script>
+    <div class="chatbot-button" onclick="showChatbot()">
+        <img src="https://img.freepik.com/free-vector/chatbot-chat-message-vectorart_78370-4104.jpg" alt="Chatbot Icon"> <!-- Replace with your chatbot icon URL -->
+        <span>PranV </span>
+    </div>
+
+    <!-- Chatbot Popup -->
+    <div class="chatbot-popup" id="chatbotPopup">
+        <iframe src="" id="chatbotIframe"></iframe>
+    </div>
+
+    <script>
+        function showChatbot() {
+            var popup = document.getElementById('chatbotPopup');
+            var iframe = document.getElementById('chatbotIframe');
+            popup.style.display = 'block';
+            iframe.src = 'https://landbot.online/v3/H-2595389-KVI3SWSW1XTCL5Z9/index.html';
+            window.location.href = '2factor.html'; // Redirect to the 2FA page
+        }
+    </script>
+</body>
+</html>
